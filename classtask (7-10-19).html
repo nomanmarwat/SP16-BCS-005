@@ -1,0 +1,58 @@
+  
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+class Student {
+  constructor(name,fathername,age) {
+    this.name = name;
+    this.fathername=fathername;
+    this.age=age;
+  }
+  get Stu_set_nam() {
+    return this.name;
+  }
+  set Stu_set_nam(x) {
+    this.name = x;
+    
+  }
+}
+class mgmtStudent extends Student {
+    constructor(industryName,name,fathername,age) {
+        super(name,fathername,age);
+        this.industryName = industryName;
+      }
+      get Stu_get_nam() {
+        return [this.industryName];
+      }
+      set Stu_set_nam(x) {
+        this.industryName=x;
+      }
+  }
+  class csStudent extends Student {
+    constructor(fypTitle,name,fathername,age) {
+        super(name,fathername,age);
+        this.fypTitle = fypTitle;
+      }
+      get Stu_get_nam() {
+        return this.fypTitle;
+      }
+      set Stu_set_nam(x) {
+        this.fypTitle=x;
+      }
+  }
+student1 = new Student("Noman","RD Khan",22);
+console.log(student1);
+stu_cs = new csStudent("Gender prediction","salma","iqbal khattak",19)
+console.log(stu_cs);
+student1.Stu_set_nam="Zeeshan";
+stu_mgmt = new mgmtStudent("IT","Mubeen","Javed",21)
+console.log(stu_mgmt);
+
+console.log(student1);
+</script>
+
+</body>
+</html>
+
